@@ -42,19 +42,9 @@ public interface Item {
 
     return Product.SerialNumber;
 
-  };
-
-  //Method takes variable parameters and returns string
-  public default String toString(String manufacturer, int SerialNumber,
-      Date manufacturedOn, String name ){
-
-    return "Manufacturer: " + manufacturer +
-           "Serial Number: " + SerialNumber+
-         "Date:"+ manufacturedOn+
-        "Name:"+ name;
-
-
   }
+
+
 
 
 }
@@ -71,11 +61,21 @@ abstract class Product implements Item {
 
 
   static int SerialNumber;
-  static String manufacturer;
+  String manufacturer;
   //Current date and time is found
   static Date manufacturedOn = new Date();
   static String name;
   static Integer currentProductionNumber;
+  //Method takes variable parameters and returns string
+  public String toString(){
+
+    return "Manufacturer: " + manufacturer +
+        "Serial Number: " + Product.SerialNumber+
+        "Date:"+ Product.manufacturedOn+
+        "Name:"+ Product.name;
+
+
+  }
 
 
 
