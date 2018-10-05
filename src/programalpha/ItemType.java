@@ -5,8 +5,9 @@ Date: 9/29/2018
 Oracle Project with interface enum and class
 
  */
-public enum ItemType {
+public enum ItemType{
+  
+  Audio("AU"), AudioMobile("AM"), Visual("VI"), VisualMobile("VM")
 
-  AU, VI, AM, VM
 
 }
