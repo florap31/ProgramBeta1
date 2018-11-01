@@ -1,4 +1,4 @@
-package programalpha;
+package programbeta;
 
 //Date is imported
 import java.util.Date;
@@ -26,18 +26,19 @@ public interface Item {
     Product.name = name1;
 
   }
+  //method to return name
    static String getName() {
 
     return Product.name;
 
   }
-
+//method to retrieve manufactured date
    static Date getManufactureDate() {
 
     return Product.manufacturedOn;
 
   }
-
+//method to retrieve serial number
    static int getSerialNumber(){
 
     return Product.SerialNumber;
