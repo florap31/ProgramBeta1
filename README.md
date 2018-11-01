@@ -1,3 +1,2 @@
-# ProgramAlpha
-This program delivers the Manufacturer name, serial number, date and "name" after an instance of an abstract class implemented
-from an interface is passed. The constructer takes in the "name" as the paremeter.
+# ProgramBeta
+This program delivers the Manufacturer name, serial number, date and "name" after an instance of an abstract class implemented from an interface is passed. The constructer takes in the "name" as the paremeter. There are set methods contained in Item interface to set Manufacturing number, serial number, name and date. The get methods return the values for these. Enum contains constants for specific type of item. AudioPlayer class takes in name and audiospecification as parameters, setting those values for the class's variables. It also prints methods from its interface. MoviePlayer class also uses the same interface and methods. AudioPlayer and MoviePlayer objects are made in main and their details are printed.
