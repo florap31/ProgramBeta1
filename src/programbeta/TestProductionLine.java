@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: Driver class for processfiles class
+ */
+
 package programbeta;
 
 import java.io.IOException;

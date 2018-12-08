@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: Allows user to add products
+ */
+
 package programbeta;
 
 import java.util.ArrayList;

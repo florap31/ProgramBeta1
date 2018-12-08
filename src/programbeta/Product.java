@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: sets information for product
+ */
+
 package programbeta;
 
 import java.util.Date;

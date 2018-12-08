@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: gets employee info and id and sets to fields
+ */
+
 package programbeta;
 import java.util.Scanner;
 import java.util.regex.Pattern;

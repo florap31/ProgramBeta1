@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: Used to view text on file for test results
+ */
+
 package programbeta;
 
 import java.io.BufferedReader;

@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: Sets audio specification and media type and audio player functions
+ */
+
 package programbeta;
 
 import java.util.Date;

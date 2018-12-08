@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: Driver class for AudioPlayer class
+ */
+
 package programbeta;
 
 public class PlayerDriver {

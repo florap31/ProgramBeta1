@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: sets moniter type and screen and uses movie player methods
+ */
+
 package programbeta;
 
 public class MoviePlayer extends Product implements MultimediaControl {

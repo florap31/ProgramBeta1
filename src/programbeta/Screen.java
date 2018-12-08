@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: sets resolution, refresh rate, and response times
+ */
+
 package programbeta;
 
 

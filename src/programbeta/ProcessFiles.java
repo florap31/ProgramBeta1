@@ -1,3 +1,8 @@
+/*
+Programmer name: Flornaldine Pierre
+File: creates file and methods write to file
+ */
+
 package programbeta;
 
 import java.io.BufferedWriter;
