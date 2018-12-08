@@ -12,54 +12,57 @@ abstract class Product implements Item, Comparable<Product>{
     setName(name);
 
   }
-  static void setProdcutionNumber(int num) {
+  public void setProductionNumber(int num) {
 
-    Product.currentProductionNumber = num;
+    this.currentProductionNumber = num;
 
   }
 // Method sets name of product class
-  static void setName(String name1) {
+  public void setName(String name1) {
 
-    Product.name = name1;
+    this.name = name1;
 
   }
   //method to return name
-  static String getName() {
+  public String getName() {
 
-    return Product.name;
+    return this.name;
 
   }
   //method to retrieve manufactured date
-  static Date getManufactureDate() {
+  public Date getManufactureDate() {
 
-    return Product.manufacturedOn;
+    return this.manufacturedOn;
 
   }
   //method to retrieve serial number
-  static int getSerialNumber(){
+  public int getSerialNumber(){
 
-    return Product.SerialNumber;
+    return serialNumber;
 
   }
 
-
-  private static String manufacturer = Item.manufacturer;
+  String name;
+  String manufacturer = Item.manufacturer;
   //Current date and time is found
-  static Date manufacturedOn = new Date();
-  static String name = getName();
+  Date manufacturedOn = new Date();
   static Integer currentProductionNumber = 1;
-  static int SerialNumber;
+  int serialNumber;
 
 
 
   //Method takes variable parameters and returns string
   public String toString() {
-    SerialNumber = currentProductionNumber++;
-    return "Manufacturer: " + manufacturer + "\n"+
-        "Serial Number: " + getSerialNumber() + "\n"+
-        "Date:" + getManufactureDate() + "\n"+
-        "Name:" + getName();
+    serialNumber = currentProductionNumber++;
+    return "Manufacturer : " + manufacturer + "\n"+
+        "Serial Number : " + getSerialNumber() + "\n"+
+        "Date : " + getManufactureDate() + "\n"+
+        "Name : " + this.name;
 
+  }
 
+  @Override
+  public int compareTo(Product o) {
+    return name.compareTo(o.name);
   }
 }

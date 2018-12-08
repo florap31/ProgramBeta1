@@ -44,8 +44,4 @@ public class MoviePlayer extends Product implements MultimediaControl {
         "Monitor Type : " + monitorType ;
   }
 
-  @Override
-  public int compareTo(Product o) {
-    return 0;
-  }
 }

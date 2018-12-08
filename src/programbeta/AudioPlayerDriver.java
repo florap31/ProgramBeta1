@@ -2,9 +2,9 @@ package programbeta;
 
 public class AudioPlayerDriver {
   //AudioPlayer class is instantiated
-  static AudioPlayer audioPlayer = new AudioPlayer("iPod Mini", "MP3");
+  AudioPlayer audioPlayer = new AudioPlayer("iPod Mini", "MP3");
   //testAudioPlayer function used to print details
-  public static void testAudioPlayer() {
+  public void testAudioPlayer() {
     audioPlayer.play();
     audioPlayer.stop();
     audioPlayer.next();

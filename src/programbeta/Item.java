@@ -15,38 +15,16 @@ public interface Item {
   final String manufacturer = "OracleProduction";
 
 
-   static void setProdcutionNumber(int num) {
+  void setProductionNumber(int num);
 
-    Product.currentProductionNumber = num;
+  void setName(String name1);
 
-  }
-
-   static void setName(String name1) {
-
-    Product.name = name1;
-
-  }
   //method to return name
-   static String getName() {
-
-    return Product.name;
-
-  }
+  String getName();
 //method to retrieve manufactured date
-   static Date getManufactureDate() {
-
-    return Product.manufacturedOn;
-
-  }
+  Date getManufactureDate();
 //method to retrieve serial number
-   static int getSerialNumber(){
-
-    return Product.SerialNumber;
-
-  }
-
-
-
+  int getSerialNumber();
 
 }
 

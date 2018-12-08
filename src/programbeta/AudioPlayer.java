@@ -1,5 +1,7 @@
 package programbeta;
 
+import java.util.Date;
+
 public class AudioPlayer extends Product implements MultimediaControl {
 
   String audioSpecification;
@@ -7,9 +9,6 @@ public class AudioPlayer extends Product implements MultimediaControl {
 /*Constructor takes in a name and assigns it to constructor in product
 audiospecification is also assigned.
  */
-
-
-
 
   AudioPlayer(String name, String audioSpecification) {
     super(name);
@@ -48,7 +47,18 @@ audiospecification is also assigned.
   }
 
   @Override
-  public int compareTo(Product o) {
-    return 0;
+  public void setName(String name1) {
+  this.name = name1;
   }
+
+  @Override
+  public String getName() {
+    return this.name;
+  }
+
+  @Override
+  public Date getManufactureDate() {
+    return this.manufacturedOn;
+  }
+
 }

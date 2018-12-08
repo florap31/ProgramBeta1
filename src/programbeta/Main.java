@@ -1,29 +1,42 @@
 package programbeta;
 import java.util.ArrayList;
 import java.util.Collections;
-public class Main {
+import java.util.List;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
+public class Main extends Application {
+
+  @Override
+  public void start(Stage primaryStage) throws Exception{
+    Parent root = FXMLLoader.load(getClass().getResource("CreateProduct.fxml"));
+    primaryStage.setTitle("Product");
+    primaryStage.setScene(new Scene(root, 600, 400));
+    primaryStage.show();
+  }
   public static void main(String[] args) {
-
+    launch(args);
     // Write one line of code to create an ArrayList of products
-    ArrayList<Product> products;
+    ArrayList<Product> products = new ArrayList<>();
 
     // Write one line of code to call testCollection and assign the result to the ArrayList
-    products = testCollection();
+    products = testCollection(products);
 
     // Write one line of code to sort the ArrayList
     Collections.sort(products);
 
     // Call the print method on the ArrayList
      print(products);
-
+    TestProductionLine testProductionLine = new TestProductionLine(products);
   }
 
   // Step 15
   // Complete the header for the testCollection method here
 
-  static ArrayList testCollection() {
-
+  static ArrayList<Product> testCollection(ArrayList<Product> products) {
     AudioPlayer a1 = new AudioPlayer("iPod Mini","MP3");
 
     AudioPlayer a2 = new AudioPlayer("Walkman","WAV ");
@@ -32,10 +45,7 @@ public class Main {
     MoviePlayer m2 = new MoviePlayer("Pyle PDV156BK",
         new Screen("1366x768", 40, 22), MonitorType.LED);
 
-    // Write one line of code here to create the collection
-    ArrayList<Product> products = new ArrayList<>();
     //objects are added to arraylist
-
     products.add(a1);
     products.add(a2);
     products.add(m1);
