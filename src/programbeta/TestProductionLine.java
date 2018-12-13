@@ -1,6 +1,6 @@
 /*
 Programmer name: Flornaldine Pierre
-File: Driver class for processfiles class
+File: Tests processfiles class
  */
 
 package programbeta;
@@ -10,6 +10,11 @@ import java.util.ArrayList;
 
 public class TestProductionLine {
 
+  /**
+   * Tests ProcessFiles class with Product and
+   * Employee objects.
+   * @param products used to test ProcessFiles with.
+   */
   TestProductionLine(ArrayList<Product> products) {
 
     ProcessFiles processFiles = new ProcessFiles();

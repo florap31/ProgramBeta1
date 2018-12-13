@@ -11,7 +11,7 @@ public class Screen implements ScreenSpec {
   int refreshrate;
   int responsetime;
 
-  Screen(String resolution, int refreshrate, int responsetime){
+  Screen(String resolution, int refreshrate, int responsetime) {
     this.resolution = resolution;
     this.refreshrate = refreshrate;
     this.responsetime = responsetime;
@@ -32,9 +32,14 @@ public class Screen implements ScreenSpec {
     return this.responsetime;
   }
 
-  public String toString(){
-    return "Resolution : " + getResolution() + "\n"+
-        "Refresh rate : " + getRefreshRate() + "\n"+
-        "Response time :" + getResponseTime();
+  /**
+   * Uses get methods tho retrieve resolution
+   * variables and return string of details.
+   * @return string of resolution variables
+   */
+  public String toString() {
+    return "Resolution : " + getResolution() + "\n"
+        + "Refresh rate : " + getRefreshRate() + "\n"
+        + "Response time :" + getResponseTime();
   }
 }

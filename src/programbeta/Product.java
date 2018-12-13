@@ -1,6 +1,8 @@
 /*
 Programmer name: Flornaldine Pierre
-File: sets information for product
+File: Product class implements Item interface as
+well as methods. Class also implements Comparable
+and compareTo method
  */
 
 package programbeta;
@@ -8,40 +10,45 @@ package programbeta;
 import java.util.Date;
 
 
-abstract class Product implements Item, Comparable<Product>{
+abstract class Product implements Item, Comparable<Product> {
 
 
   //Constructor sets name with given parameter
-   Product(String name) {
+  Product(String name) {
 
     setName(name);
 
   }
+
   public void setProductionNumber(int num) {
 
     this.currentProductionNumber = num;
 
   }
-// Method sets name of product class
+
+  // Method sets name of product class
   public void setName(String name1) {
 
     this.name = name1;
 
   }
+
   //method to return name
   public String getName() {
 
     return this.name;
 
   }
+
   //method to retrieve manufactured date
   public Date getManufactureDate() {
 
     return this.manufacturedOn;
 
   }
+
   //method to retrieve serial number
-  public int getSerialNumber(){
+  public int getSerialNumber() {
 
     return serialNumber;
 
@@ -59,10 +66,10 @@ abstract class Product implements Item, Comparable<Product>{
   //Method takes variable parameters and returns string
   public String toString() {
     serialNumber = currentProductionNumber++;
-    return "Manufacturer : " + manufacturer + "\n"+
-        "Serial Number : " + getSerialNumber() + "\n"+
-        "Date : " + getManufactureDate() + "\n"+
-        "Name : " + this.name;
+    return "Manufacturer : " + manufacturer + "\n"
+        + "Serial Number : " + getSerialNumber() + "\n"
+        + "Date : " + getManufactureDate() + "\n"
+        + "Name : " + this.name;
 
   }
 

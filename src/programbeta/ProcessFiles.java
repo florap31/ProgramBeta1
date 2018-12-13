@@ -1,6 +1,8 @@
 /*
 Programmer name: Flornaldine Pierre
-File: creates file and methods write to file
+File: Class methods create files if
+one doesn't exist and writes to files
+based on object type
  */
 
 package programbeta;
@@ -18,8 +20,8 @@ public class ProcessFiles {
   private Path p2;
   private Path p3;
 
-  ProcessFiles(){
-      CreateDirectory();
+  ProcessFiles() {
+    CreateDirectory();
   }
 
   //If directory does not exist, method creates it.
@@ -31,15 +33,14 @@ public class ProcessFiles {
     File file = new File(directoryPath, filePath);
     if (directory.mkdirs()) {
       System.out.println("File created.");
-    }
-    else
+    } else {
       System.out.println("File already exists");
+    }
 
-    if(!file.exists()) {
-      try{
+    if (!file.exists()) {
+      try {
         file.createNewFile();
-      }
-      catch (IOException e) {
+      } catch (IOException e) {
         e.printStackTrace();
       }
     }
@@ -48,18 +49,30 @@ public class ProcessFiles {
     p2 = Paths.get(filePath);
     p3 = Paths.get(directoryPath, filePath);
   }
-//prints employee information onto file
+
+  /**
+   * Uses BufferedWriter and FileWriter to print
+   * employee information onto file.
+   * @param emp employee object used to print information
+   * @throws IOException because BufferedWriter and FileWriter are being used
+   */
   public void WriteFile(EmployeeInfo emp) throws IOException {
     FileWriter fw = new FileWriter(String.valueOf(p3), true);
     BufferedWriter writer = new BufferedWriter(fw);
     writer.write(emp.toString());
     writer.close();
   }
-//prints products information onto file
+
+  /**
+   * Uses BufferedWriter and FileWriter to print
+   * Product information onto file.
+   * @param products Product object used to print information
+   * @throws IOException because BufferedWriter and FileWriter are being used
+   */
   public void WriteFile(ArrayList<Product> products) throws IOException {
     FileWriter fw = new FileWriter(String.valueOf(p3), true);
     BufferedWriter writer = new BufferedWriter(fw);
-    writer.write("\n"+products.toString());
+    writer.write("\n" + products.toString());
     writer.close();
   }
 

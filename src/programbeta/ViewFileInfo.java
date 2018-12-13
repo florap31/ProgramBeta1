@@ -1,6 +1,7 @@
 /*
 Programmer name: Flornaldine Pierre
-File: Used to view text on file for test results
+File: Uses BufferedReader to read each line of
+File and prints each line to console
  */
 
 package programbeta;
@@ -20,6 +21,12 @@ public class ViewFileInfo {
     viewFile();
   }
 
+
+  /**
+   * FileReader and BufferedReader uses file
+   * to read each line and print to console
+   * each line. Also catches exception if file is not found
+   */
   public void viewFile() {
     //BufferedReader reads each line of text file and prints to console
     try {

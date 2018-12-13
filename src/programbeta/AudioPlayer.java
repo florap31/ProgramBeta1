@@ -1,6 +1,10 @@
-/*
-Programmer name: Flornaldine Pierre
-File: Sets audio specification and media type and audio player functions
+/* Programmer name: Flornaldine Pierre
+
+Date: 12/12/2018
+Class extends product to set the name,
+audio specification, and media type of the
+Audio Player
+
  */
 
 package programbeta;
@@ -11,10 +15,10 @@ public class AudioPlayer extends Product implements MultimediaControl {
 
   String audioSpecification;
   ItemType mediaType;
-/*Constructor takes in a name and assigns it to constructor in product
-audiospecification is also assigned.
- */
 
+  /*Constructor takes in a name and assigns it to constructor in product
+  audiospecification is also assigned.
+  */
   AudioPlayer(String name, String audioSpecification) {
     super(name);
     this.audioSpecification = audioSpecification;
@@ -45,15 +49,15 @@ audiospecification is also assigned.
 
   @Override
   public String toString() {
-    return super.toString() + "\n" +
-        "Audio Spec : " + audioSpecification + "\n" +
-        "Type : " + mediaType;
+    return super.toString() + "\n"
+        + "Audio Spec : " + audioSpecification + "\n"
+        + "Type : " + mediaType;
 
   }
 
   @Override
   public void setName(String name1) {
-  this.name = name1;
+    this.name = name1;
   }
 
   @Override

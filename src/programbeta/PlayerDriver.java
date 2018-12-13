@@ -1,19 +1,23 @@
 /*
 Programmer name: Flornaldine Pierre
-File: Driver class for AudioPlayer class
+File: Driver class for Player Driver class
  */
 
 package programbeta;
 
 public class PlayerDriver {
- public static void testPlayer() {
 
-   AudioPlayer audioPlayer = new AudioPlayer("name", "Audio specification");
+  /**
+   * Method creates AudioPlayer object to test the class.
+   */
+  public static void testPlayer() {
 
-   audioPlayer.next();
-   audioPlayer.previous();
-   audioPlayer.play();
-   audioPlayer.stop();
+    AudioPlayer audioPlayer = new AudioPlayer("name", "Audio specification");
 
- }
+    audioPlayer.next();
+    audioPlayer.previous();
+    audioPlayer.play();
+    audioPlayer.stop();
+
+  }
 }

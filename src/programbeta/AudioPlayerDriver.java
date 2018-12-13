@@ -3,7 +3,11 @@ package programbeta;
 public class AudioPlayerDriver {
   //AudioPlayer class is instantiated
   AudioPlayer audioPlayer = new AudioPlayer("iPod Mini", "MP3");
-  //testAudioPlayer function used to print details
+
+  /**
+   * Prints details of AudioPlayer object methods
+   * As well as MultimediaControl detains
+   */
   public void testAudioPlayer() {
     audioPlayer.play();
     audioPlayer.stop();
